@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>سياسة الخصوصية – تطبيق علاء الدين</title>
+
+    <!-- خط عربي -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =========================================
+           ألوان تطبيق علاء الدين
+           ========================================= */
+
+        :root {
+            --primary: #00695C;
+            --dark: #004D40;
+            --light: #B2DFDB;
+            --background: #E0F2F1;
+
+            --text-dark: #123D38;
+            --text: #294C47;
+            --text-light: #607D78;
+
+            --white: #FFFFFF;
+
+            --soft-green: #F1FAF9;
+            --border-green: #B7DCD7;
+        }
+
+        /* =========================================
+           Reset
+           ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* =========================================
+           الصفحة
+           ========================================= */
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at top right,
+                    #CFEAE7 0%,
+                    #E0F2F1 35%,
+                    #F4FAF9 100%
+                );
+
+            color: var(--text);
+
+            padding: 20px;
+
+            line-height: 1.7;
+        }
+
+        /* =========================================
+           الحاوية الرئيسية
+           ========================================= */
+
+        .container {
+            max-width: 900px;
+
+            margin: 0 auto;
+
+            background: var(--white);
+
+            padding: 40px 50px;
+
+            border-radius: 28px;
+
+            box-shadow:
+                0 20px 60px rgba(0, 77, 64, 0.10);
+
+            border:
+                1px solid rgba(0, 105, 92, 0.08);
+
+            transition: all 0.3s ease;
+        }
+
+        .container:hover {
+            box-shadow:
+                0 25px 70px rgba(0, 77, 64, 0.14);
+        }
+
+        /* =========================================
+           رأس الصفحة
+           ========================================= */
+
+        .header {
+            text-align: center;
+
+            border-bottom:
+                3px solid var(--primary);
+
+            padding-bottom: 20px;
+
+            margin-bottom: 30px;
+        }
+
+        /* =========================================
+           شعار التطبيق
+           ========================================= */
+
+        .logo {
+            width: 85px;
+            height: 85px;
+
+            object-fit: contain;
+
+            display: block;
+
+            margin: 0 auto 10px auto;
+
+            border-radius: 22px;
+
+            filter:
+                drop-shadow(0 6px 12px rgba(0, 77, 64, 0.15));
+        }
+
+        .header h1 {
+            font-size: 2.4rem;
+
+            font-weight: 800;
+
+            color: var(--dark);
+
+            letter-spacing: -0.5px;
+        }
+
+        .header h1 span {
+            color: var(--primary);
+        }
+
+        .header .sub {
+            color: var(--text-light);
+
+            font-weight: 400;
+
+            font-size: 1rem;
+
+            margin-top: 8px;
+        }
+
+        /* =========================================
+           تاريخ آخر تحديث
+           ========================================= */
+
+        .badge {
+            display: inline-block;
+
+            background: var(--light);
+
+            padding: 6px 18px;
+
+            border-radius: 40px;
+
+            font-size: 0.85rem;
+
+            color: var(--dark);
+
+            margin-top: 5px;
+
+            border:
+                1px solid var(--border-green);
+        }
+
+        /* =========================================
+           الأقسام
+           ========================================= */
+
+        .section {
+            margin-bottom: 32px;
+
+            transition:
+                transform 0.2s ease;
+        }
+
+        .section:hover {
+            transform: translateX(-4px);
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+
+            font-weight: 700;
+
+            color: var(--dark);
+
+            border-right:
+                6px solid var(--primary);
+
+            padding-right: 16px;
+
+            margin-bottom: 18px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+        }
+
+        .section h2 i {
+            font-style: normal;
+
+            font-size: 1.4rem;
+        }
+
+        .section p {
+            margin-bottom: 12px;
+
+            padding-right: 10px;
+
+            color: var(--text);
+        }
+
+        /* =========================================
+           القوائم
+           ========================================= */
+
+        ul {
+            list-style: none;
+
+            padding-right: 10px;
+        }
+
+        ul li {
+            position: relative;
+
+            padding-right: 28px;
+
+            margin-bottom: 12px;
+
+            color: var(--text);
+        }
+
+        ul li::before {
+            content: "•";
+
+            color: var(--primary);
+
+            font-size: 1.8rem;
+
+            position: absolute;
+
+            right: -2px;
+
+            top: -8px;
+        }
+
+        /* =========================================
+           القوائم المتداخلة
+           ========================================= */
+
+        .nested-list {
+            margin-top: 8px;
+
+            margin-right: 20px;
+        }
+
+        .nested-list li {
+            padding-right: 24px;
+
+            font-size: 0.98rem;
+        }
+
+        .nested-list li::before {
+            content: "▹";
+
+            color: var(--primary);
+
+            font-size: 1.2rem;
+
+            top: -2px;
+        }
+
+        /* =========================================
+           كروت الخدمات
+           ========================================= */
+
+        .services-grid {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 10px;
+        }
+
+        .services-grid .service-item {
+            background: var(--soft-green);
+
+            padding: 8px 18px;
+
+            border-radius: 40px;
+
+            border:
+                1px solid var(--border-green);
+
+            font-weight: 500;
+
+            font-size: 0.95rem;
+
+            color: var(--dark);
+
+            transition: all 0.2s ease;
+        }
+
+        .services-grid .service-item:hover {
+            background: var(--light);
+
+            border-color: var(--primary);
+
+            transform: translateY(-2px);
+        }
+
+        /* =========================================
+           صندوق البريد الإلكتروني
+           ========================================= */
+
+        .email-box {
+            background: var(--soft-green);
+
+            padding: 12px 20px;
+
+            border-radius: 50px;
+
+            display: inline-block;
+
+            font-weight: 700;
+
+            font-size: 1.1rem;
+
+            border:
+                1px solid var(--border-green);
+
+            color: var(--dark);
+        }
+
+        /* =========================================
+           التذييل
+           ========================================= */
+
+        .footer {
+            margin-top: 45px;
+
+            padding-top: 25px;
+
+            border-top:
+                2px dashed var(--border-green);
+
+            text-align: center;
+
+            color: var(--text-light);
+
+            font-size: 1rem;
+        }
+
+        .footer strong {
+            color: var(--dark);
+        }
+
+        .footer a {
+            color: var(--primary);
+
+            text-decoration: none;
+
+            font-weight: 700;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* =========================================
+           الأجهزة الصغيرة
+           ========================================= */
+
+        @media (max-width: 650px) {
+
+            .container {
+                padding: 25px 18px;
+            }
+
+            .logo {
+                width: 75px;
+                height: 75px;
+            }
+
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .section h2 {
+                font-size: 1.3rem;
+            }
+
+            .services-grid .service-item {
+                font-size: 0.85rem;
+
+                padding: 6px 14px;
+            }
+        }
+
+        /* =========================================
+           الهواتف الصغيرة
+           ========================================= */
+
+        @media (max-width: 480px) {
+
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 20px 14px;
+
+                border-radius: 18px;
+            }
+
+            .logo {
+                width: 70px;
+                height: 70px;
+
+                border-radius: 18px;
+            }
+
+            .header h1 {
+                font-size: 1.6rem;
+            }
+
+            .header h1.app-name {
+                font-size: 1.35rem !important;
+            }
+
+            .section h2 {
+                font-size: 1.2rem;
+
+                border-right-width: 5px;
+
+                padding-right: 12px;
+            }
+
+            .section p {
+                font-size: 0.95rem;
+            }
+
+            .email-box {
+                font-size: 0.95rem;
+
+                padding: 10px 15px;
+
+                border-radius: 30px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- =========================================
+             رأس الصفحة
+             ========================================= -->
+
+        <div class="header">
+
+            <!-- شعار تطبيق علاء الدين -->
+            <img
+                src="logo.png"
+                alt="شعار تطبيق علاء الدين"
+                class="logo"
+            >
+
+            <h1>
+                سياسة الخصوصية
+            </h1>
+
+            <h1
+                class="app-name"
+                style="font-size:1.8rem; margin-top:-10px;"
+            >
+                تطبيق <span>علاء الدين</span>
+            </h1>
+
+            <div class="badge">
+                آخر تحديث: 30 يونيو 2026
+            </div>
+
+            <p class="sub">
+                نحن نحترم خصوصيتك ونلتزم بحماية بياناتك الشخصية.
+            </p>
+
+        </div>
+
+
+        <!-- =========================================
+             1. مقدمة
+             ========================================= -->
+
+        <div class="section">
+
+            <h2>
+                📖 ١. مقدمة
+            </h2>
+
+            <p>
+                مرحبًا بك في تطبيق علاء الدين. نحن نحترم خصوصيتك
+                ونلتزم بحماية بياناتك الشخصية. توضح هذه السياسة
+                كيفية جمع واستخدام وحماية المعلومات عند استخدام التطبيق.
+            </p>
+
+        </div>
+
+
+        <!-- =========================================
+             2. المعلومات التي نقوم بجمعها
+             ========================================= -->
+
+        <div class="section">
+
+            <h2>
+                📊 ٢. المعلومات التي نقوم بجمعها
+            </h2>
+
+            <p>
+                قد نقوم بجمع الأنواع التالية من البيانات:
+            </p>
+
+            <ul>
+
+                <li>
+
+                    <strong>أ) معلومات الحساب</strong>
+
+                    <ul class="nested-list">
+
+                        <li>
+                            الاسم
+                        </li>
+
+                        <li>
+                            البريد الإلكتروني
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <li>
+
+                    <strong>ب) بيانات الاستخدام</strong>
+
+                    <ul class="nested-list">
+
+                        <li>
+                            المنتجات التي تشاهدها أو تتفاعل معها
+                        </li>
+
+                        <li>
+                            عمليات البحث داخل التطبيق
+                        </li>
+
+                        <li>
+                            المفضلة وسلة التسوق
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <li>
+
+                    <strong>ج) بيانات الجهاز</strong>
+
+                    <ul class="nested-list">
+
+                        <li>
+                            نوع الجهاز ونظام التشغيل
+                        </li>
+
+                        <li>
+                            عنوان IP (لأغراض الأمان والتحليل)
+                        </li>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- =========================================
+             3. كيف نستخدم المعلومات
+             ========================================= -->
+
+        <div class="section">
+
+            <h2>
+                ⚙️ ٣. كيف نستخدم المعلومات
+            </h2>
+
+            <p>
+                نستخدم البيانات من أجل:
+            </p>
+
+            <ul>
+
+                <li>
+                    تشغيل التطبيق وتحسين الأداء
+                </li>
+
+                <li>
+                    عرض المنتجات والمتاجر المناسبة
+                </li>
+
+                <li>
+                    تحسين تجربة المستخدم
+                </li>
+
+                <li>
+                    دعم التواصل داخل التطبيق
+                </li>
+
+                <li>
+                    منع الاحتيال وإساءة الاستخدام
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- =========================================
+             4. مشاركة المعلومات
+             ========================================= -->
+
+        <div class="section">
+
+            <h2>
+                🤝 ٤. مشاركة المعلومات
+            </h2>
+
+            <p>
+                <strong>
+                    نحن لا نبيع بيانات المستخدمين لأي طرف ثالث.
+                </strong>
+            </p>
+
+            <p>
+                قد تتم مشاركة بعض البيانات فقط مع:
+            </p>
+
+            <div class="services-grid">
+
+                <span class="service-item">
+                    ☁️ Supabase (تخزين البيانات)
+                </span>
+
+                <span class="service-item">
+                    🔔 OneSignal (الإشعارات)
+                </span>
+
+                <span class="service-item">
+                    📈 خدمات التحليلات (تحسين الأداء)
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================================
+             5. تخزين وحماية البيانات
+             ========================================= -->
+
+        <div class="section">
+
+            <h2>
+                🛡️ ٥. تخزين وحماية البيانات
+            </h2>
+
+            <p>
+                نستخدم إجراءات أمان مناسبة لحماية البيانات،
+                بما في ذلك:
+            </p>
+
+            <ul>
+
+                <li>
+                    تشفير الاتصال (HTTPS)
+                </li>
+
+                <li>
+                    قواعد صلاحيات الوصول (RLS في Supabase)
+                </li>
+
+                <li>
+                    حماية البيانات من الوصول غير المصرح به
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- =========================================
+             6. خدمات الطرف الثالث
+             ========================================= -->
+
+        <div class="section">
+
+            <h2>
+                🔗 ٦. خدمات الطرف الثالث
+            </h2>
+
+            <p>
+                قد يستخدم التطبيق خدمات خارجية مثل:
+            </p>
+
+            <div class="services-grid">
+
+                <span class="service-item">
+                    Supabase
+                </span>
+
+                <span class="service-item">
+                    OneSignal
+                </span>
+
+                <span class="service-item">
+                    Google Play Services
+                </span>
+
+            </div>
+
+            <p style="margin-top: 12px;">
+                كل خدمة لديها سياسة خصوصية خاصة بها.
+            </p>
+
+        </div>
+
+
+        <!-- =========================================
+             7. حقوق المستخدم
+             ========================================= -->
+
+        <div class="section">
+
+            <h2>
+                👤 ٧. حقوق المستخدم
+            </h2>
+
+            <p>
+                يحق لك:
+            </p>
+
+            <ul>
+
+                <li>
+                    طلب حذف حسابك
+                </li>
+
+                <li>
+                    طلب تعديل بياناتك
+                </li>
+
+                <li>
+                    إيقاف استخدام التطبيق في أي وقت
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- =========================================
+             8. خصوصية الأطفال
+             ========================================= -->
+
+        <div class="section">
+
+            <h2>
+                🧒 ٨. خصوصية الأطفال
+            </h2>
+
+            <p>
+                التطبيق غير موجه للأطفال دون عمر 13 عامًا.
+                ولا نقوم بجمع بيانات عن الأطفال عمدًا.
+            </p>
+
+        </div>
+
+
+        <!-- =========================================
+             9. التعديلات على السياسة
+             ========================================= -->
+
+        <div class="section">
+
+            <h2>
+                📝 ٩. التعديلات على السياسة
+            </h2>
+
+            <p>
+                قد نقوم بتحديث هذه السياسة من وقت لآخر.
+                سيتم نشر أي تغييرات داخل التطبيق أو صفحة المتجر.
+            </p>
+
+        </div>
+
+
+        <!-- =========================================
+             10. التواصل معنا
+             ========================================= -->
+
+        <div class="section">
+
+            <h2>
+                📧 ١٠. التواصل معنا
+            </h2>
+
+            <p>
+                إذا كان لديك أي سؤال حول سياسة الخصوصية،
+                يمكنك التواصل معنا عبر:
+            </p>
+
+            <p class="email-box">
+                📩 admin@alaaaldin.store
+            </p>
+
+        </div>
+
+
+        <!-- =========================================
+             تذييل الصفحة
+             ========================================= -->
+
+        <div class="footer">
+
+            <p>
+                © 2026
+                <strong>تطبيق علاء الدين</strong>
+                — جميع الحقوق محفوظة.
+            </p>
+
+            <p style="font-size:0.9rem; margin-top:6px;">
+
+                تم إنشاء هذه الصفحة لنشر سياسة الخصوصية
+                على <strong>GitHub Pages</strong>.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- GitHub Pages rebuild -->
+
+</body>
+</html>
